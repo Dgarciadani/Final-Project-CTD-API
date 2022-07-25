@@ -30,8 +30,9 @@ public class AWSS3Service {
 
     static {
         credentials = new BasicAWSCredentials(
-                "AKIASDYGBXDRVW5ARYAU",
-                "BCZKViqpPogP4Ygz+SwTPym5JM3itTcOBRoRzgOk"
+                //TODO: REPLACE WITH YOUR AWS CREDENTIALS
+                "ACCESS_KEY",
+                "SECRET_KEY"
         );
     }
 
