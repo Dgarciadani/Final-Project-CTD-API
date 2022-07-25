@@ -10,10 +10,12 @@ import java.io.IOException;
 @Service
 public class WhatsAppMessageSenderService {
 
+    //TODO: SET YOUR ACCESS TOKEN HERE
+    private final String userAccessToken = "USER ACCESS TOKEN";
 
-    private final String userAccessToken = "EAAE6LNGxWjMBAH9aBRAIrJoE2IThlHCIGDOczQ4qFIfCD3B3ZC772KXNpttROUHXIYlDzUODoF8ryGZC3GEIy06fWH73s9ZBzXGKjAkgpKW8hrDvPZBFOFFQdzn9pfiT9iR4bYtMJ20fxPHbnrCbSm4Y4LDZBd6ZBHPPUfPIYJLrn82xON7DOiVl8pZA5cqNTBjmxJFsuZBv30FSZCZA7qbsAa";
+    //TODO: SET YOUR ACCESS TOKEN HERE
 
-    private final String whatsappID = "110610228360808";
+    private final String whatsappID = "WHATSAPP ID";
 
     private final String rooturl = "https://graph.facebook.com/v13.0/";
 
@@ -29,7 +31,7 @@ public class WhatsAppMessageSenderService {
 
             StringBuilder sb = new StringBuilder();
             sb.append(json);
-            sb.replace(sb.indexOf("--toSend--"), sb.indexOf("--toSend--") + "--toSend--".length(), "54"+bookingDetails.getUserPhone());
+            sb.replace(sb.indexOf("--toSend--"), sb.indexOf("--toSend--") + "--toSend--".length(), "54" + bookingDetails.getUserPhone());
             sb.replace(sb.indexOf("--location--"), sb.indexOf("--location--") + "--location--".length(), bookingDetails.getLocationName());
             sb.replace(sb.indexOf("--BookingId--"), sb.indexOf("--BookingId--") + "--BookingId--".length(), "Bk-000" + bookingDetails.getId().toString());
             sb.replace(sb.indexOf("--ProductName--"), sb.indexOf("--ProductName--") + "--ProductName--".length(), bookingDetails.getProductName());
